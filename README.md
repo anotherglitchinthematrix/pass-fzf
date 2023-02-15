@@ -14,6 +14,9 @@ $ PREFIX=/usr/bin sudo make [install|uninstall]
 
 # MacOS Intel
 $ PREFIX=/usr/local make [install|uninstall]
+
+# MacOS ARM
+$ PREFIX=/opt/homebrew make [install|uninstall]
 ```
 
 ## Usage
