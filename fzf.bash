@@ -4,8 +4,10 @@ VERSION="1.0.0"
 
 set -e
 
+_PASSWORD_STORE_DIR="${PASSWORD_STORE_DIR:-$HOME/.password-store}";
+
 cmd_fzf_get_files() {
-	find "$HOME/.password-store" -name "*.gpg" | sed -e "s:^$HOME\/\.password-store\/::gi" -e 's:\.gpg$::gi'
+	find "$_PASSWORD_STORE_DIR" -name "*.gpg" -type f | sed -e "s:^$_PASSWORD_STORE_DIR\/::gi" -e 's:\.gpg$::gi' | sort
 }
 
 FZF() {
